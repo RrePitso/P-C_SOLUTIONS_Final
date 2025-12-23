@@ -14,12 +14,12 @@
         .text-turquoise { color: #00F2FE; }
         .bg-turquoise { background-color: #00F2FE; }
         .border-turquoise { border-color: #00F2FE; }
-        /* Brand Gradient using the requested Turquoise scheme */
         .brand-gradient { background: linear-gradient(135deg, #0891B2 0%, #00F2FE 100%); }
         .glass-card { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.05); }
         .hero-glow { background: radial-gradient(circle at center, rgba(0, 242, 254, 0.15) 0%, transparent 70%); }
         @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
         .animate-float { animation: float 6s ease-in-out infinite; }
+        .image-fallback { display: flex; align-items: center; justify-content: center; background: #0f172a; border: 1px solid #0891B2; }
     </style>
 </head>
 <body class="bg-[#020617] text-slate-200 selection:bg-cyan-500 selection:text-white">
@@ -28,8 +28,10 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <a href="#home" class="flex items-center space-x-4 cursor-pointer">
-                    <img src="IMG-20251222-WA0011.jpg" alt="P&C Solutions Logo" class="w-14 h-14 rounded-full border border-turquoise/20">
-                    <span class="text-white font-black text-2xl tracking-tighter uppercase">P&C Solutions</span>
+                    <div class="w-14 h-14 rounded-full overflow-hidden border border-turquoise/20 flex items-center justify-center bg-slate-900">
+                        <img src="IMG-20251222-WA0011.jpg" alt="P&C" id="nav-logo" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'brand-gradient w-full h-full flex items-center justify-center\'><i data-lucide=\'cpu\' class=\'text-slate-950 w-7 h-7\'></i></div>'; lucide.createIcons();">
+                    </div>
+                    <span class="text-white font-black text-2xl tracking-tighter">P&C SOLUTIONS</span>
                 </a>
                 <div class="hidden md:flex items-center space-x-10">
                     <a href="#services" class="text-slate-400 hover:text-turquoise transition-colors font-medium text-sm uppercase tracking-widest">Services</a>
@@ -44,8 +46,8 @@
 
     <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
         <div class="absolute inset-0 hero-glow"></div>
-        <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center z-10">
-            <div class="space-y-10 text-center lg:text-left">
+        <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-1 gap-16 items-center z-10">
+            <div class="space-y-10 text-center">
                 <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-slate-900/50 border border-turquoise/30 text-turquoise text-xs font-bold uppercase tracking-[0.2em]">
                     <span class="flex h-2 w-2 rounded-full bg-turquoise animate-pulse"></span>
                     Innovative & Modern Designs
@@ -54,41 +56,38 @@
                     We Build the <br>
                     <span class="text-transparent bg-clip-text brand-gradient">Future of Business</span>
                 </h1>
-                <p class="text-slate-400 text-xl max-w-xl leading-relaxed font-light">
-                    Our mission is to bridge the gap between complex technology and business success for modern South African enterprises.
+                <p class="text-slate-400 text-xl max-w-2xl mx-auto leading-relaxed font-light">
+                    P&C Solutions transforms vision into digital reality through bespoke software architecture and high-tier strategic consulting.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
-                    <a href="#contact" class="px-10 py-5 brand-gradient text-slate-950 rounded-full font-extrabold text-lg shadow-2xl transition-all">Start Your Project</a>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="#contact" class="px-10 py-5 brand-gradient text-slate-950 rounded-full font-extrabold text-lg shadow-2xl transition-all hover:shadow-turquoise/40">Start Your Project</a>
                     <a href="#services" class="px-10 py-5 bg-slate-900 border border-slate-700 text-white rounded-full font-bold text-lg hover:bg-slate-800 transition-all">Our Services</a>
                 </div>
-            </div>
-            <div class="relative hidden lg:block animate-float">
-                <img src="IMG-20251221-WA0013.jpg" alt="Solutions Overview" class="rounded-[3rem] shadow-2xl border border-turquoise/10 w-full">
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-32 relative bg-[#020617]">
+    <section id="services" class="py-32 relative">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-24">
-                <h2 class="text-turquoise font-bold uppercase tracking-[0.4em] text-sm mb-4">What We Offer</h2>
-                <h3 class="text-5xl font-black text-white tracking-tight">Digital Engineering Excellence</h3>
+                <h2 class="text-turquoise font-bold uppercase tracking-[0.4em] text-sm mb-4">Core Capabilities</h2>
+                <h3 class="text-5xl font-black text-white tracking-tight">Full-Spectrum Digital Engineering</h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="p-10 glass-card rounded-[3rem] group hover:border-turquoise/50 transition-all">
+                <div class="p-10 glass-card rounded-[3rem] group hover:border-turquoise/50 transition-all duration-500">
                     <i data-lucide="code-2" class="text-turquoise w-12 h-12 mb-8"></i>
                     <h4 class="text-2xl font-bold text-white mb-4">Software Solutions</h4>
-                    <p class="text-slate-400 font-light leading-relaxed">Custom architecture built to scale with your growing enterprise needs.</p>
+                    <p class="text-slate-400 font-light leading-relaxed">Enterprise-grade architecture designed for scalability and high-load performance.</p>
                 </div>
-                <div class="p-10 glass-card rounded-[3rem] group hover:border-turquoise/50 transition-all">
-                    <i data-lucide="briefcase" class="text-turquoise w-12 h-12 mb-8"></i>
-                    <h4 class="text-2xl font-bold text-white mb-4">Business Solutions</h4>
-                    <p class="text-slate-400 font-light leading-relaxed">Strategic consulting to streamline and optimize your business operations.</p>
+                <div class="p-10 glass-card rounded-[3rem] group hover:border-turquoise/50 transition-all duration-500">
+                    <i data-lucide="shield-check" class="text-turquoise w-12 h-12 mb-8"></i>
+                    <h4 class="text-2xl font-bold text-white mb-4">Business Strategy</h4>
+                    <p class="text-slate-400 font-light leading-relaxed">Tailored consulting to optimize operational efficiency and digital transformation.</p>
                 </div>
-                <div class="p-10 glass-card rounded-[3rem] group hover:border-turquoise/50 transition-all">
-                    <i data-lucide="monitor" class="text-turquoise w-12 h-12 mb-8"></i>
+                <div class="p-10 glass-card rounded-[3rem] group hover:border-turquoise/50 transition-all duration-500">
+                    <i data-lucide="layout" class="text-turquoise w-12 h-12 mb-8"></i>
                     <h4 class="text-2xl font-bold text-white mb-4">Website Creations</h4>
-                    <p class="text-slate-400 font-light leading-relaxed">High-performance digital frontends designed to drive measurable results.</p>
+                    <p class="text-slate-400 font-light leading-relaxed">High-conversion digital frontends with a focus on immersive user experience.</p>
                 </div>
             </div>
         </div>
@@ -96,36 +95,35 @@
 
     <section id="insights" class="py-32 bg-[#030a1f]">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+            <div class="flex justify-between items-end mb-16">
                 <div>
                     <h2 class="text-turquoise font-bold uppercase tracking-widest text-sm mb-4">Latest Insights</h2>
-                    <h3 class="text-5xl font-black text-white tracking-tight">Our Technical Perspectives</h3>
+                    <h3 class="text-5xl font-black text-white tracking-tight">Technical Excellence</h3>
                 </div>
-                <a href="#contact" class="text-turquoise border-b border-turquoise pb-1 font-bold hover:text-white transition-all tracking-widest text-sm uppercase">Get In Touch</a>
+                <a href="#contact" class="text-turquoise border-b border-turquoise pb-1 font-bold hover:text-white hover:border-white transition-all uppercase tracking-widest text-sm">View All</a>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="group cursor-pointer overflow-hidden rounded-[2.5rem] glass-card">
-                    <div class="h-72 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200" alt="AI Development" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    </div>
-                    <div class="p-10">
-                        <p class="text-turquoise text-xs font-bold uppercase tracking-widest mb-4">Innovation</p>
-                        <h4 class="text-3xl font-bold text-white mb-6 group-hover:text-turquoise transition-colors">Cutting Dev Time with Enterprise AI Platforms</h4>
-                        <div class="flex items-center gap-2 text-white font-semibold">
-                            Read Insight <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="group cursor-pointer overflow-hidden rounded-[2.5rem] glass-card">
-                    <div class="h-72 overflow-hidden">
+                    <div class="h-80 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200" alt="Cloud Security" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
                     <div class="p-10">
                         <p class="text-turquoise text-xs font-bold uppercase tracking-widest mb-4">Security</p>
-                        <h4 class="text-3xl font-bold text-white mb-6 group-hover:text-turquoise transition-colors">How to Fortify Your Cloud Security Architecture</h4>
+                        <h4 class="text-3xl font-bold text-white mb-6 group-hover:text-turquoise transition-colors">Fortifying Enterprise Cloud Infrastructure</h4>
                         <div class="flex items-center gap-2 text-white font-semibold">
-                            Read Insight <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            Learn more <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="group cursor-pointer overflow-hidden rounded-[2.5rem] glass-card">
+                    <div class="h-80 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200" alt="Artificial Intelligence" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-10">
+                        <p class="text-turquoise text-xs font-bold uppercase tracking-widest mb-4">Innovation</p>
+                        <h4 class="text-3xl font-bold text-white mb-6 group-hover:text-turquoise transition-colors">The New Rules of AI-Powered Ecosystems</h4>
+                        <div class="flex items-center gap-2 text-white font-semibold">
+                            Learn more <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </div>
                     </div>
                 </div>
@@ -134,26 +132,31 @@
     </section>
 
     <section id="contact" class="py-32">
-        <div class="max-w-5xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl md:text-7xl font-black text-white tracking-tighter mb-6">Ready to take the <br><span class="text-transparent bg-clip-text brand-gradient">next step?</span></h2>
-            </div>
-            <div class="glass-card rounded-[3.5rem] p-10 md:p-16">
-                <form action="https://formspree.io/f/info@pnct.co.za" method="POST" class="space-y-8">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h2 class="text-5xl md:text-7xl font-black text-white mb-12 tracking-tighter">Ready to take the <br><span class="text-transparent bg-clip-text brand-gradient">next step?</span></h2>
+            <div class="glass-card rounded-[3.5rem] p-12 md:p-20">
+                <form action="https://formspree.io/f/info@pnct.co.za" method="POST" class="grid gap-8">
                     <div class="grid md:grid-cols-2 gap-8">
                         <input type="text" name="name" placeholder="Full Name" required class="w-full bg-slate-900/50 border border-slate-800 rounded-full px-8 py-5 text-white focus:border-turquoise outline-none transition-all">
                         <input type="email" name="email" placeholder="Email Address" required class="w-full bg-slate-900/50 border border-slate-800 rounded-full px-8 py-5 text-white focus:border-turquoise outline-none transition-all">
                     </div>
-                    <textarea name="message" rows="5" placeholder="How can we help you?" required class="w-full bg-slate-900/50 border border-slate-800 rounded-[2.5rem] px-8 py-6 text-white focus:border-turquoise outline-none transition-all"></textarea>
+                    <textarea name="message" rows="5" placeholder="How can we help your business?" required class="w-full bg-slate-900/50 border border-slate-800 rounded-[2.5rem] px-8 py-6 text-white focus:border-turquoise outline-none transition-all"></textarea>
                     <button type="submit" class="w-full py-6 brand-gradient text-slate-950 font-black rounded-full text-xl shadow-2xl hover:scale-[1.02] transition-all uppercase tracking-widest">Connect with our experts</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer class="py-20 border-t border-slate-900 text-center bg-[#020617]">
+    <footer class="py-20 border-t border-slate-900 text-center">
         <div class="max-w-7xl mx-auto px-4">
-            <img src="IMG-20251222-WA0011.jpg" alt="Logo" class="w-20 h-20 mx-auto rounded-full mb-10 opacity-60">
+            <div class="w-20 h-20 mx-auto rounded-full overflow-hidden border border-turquoise/20 flex items-center justify-center bg-slate-900 mb-10">
+                <img src="IMG-20251222-WA0011.jpg" alt="Logo" class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity" onerror="this.parentElement.innerHTML='<div class=\'brand-gradient w-full h-full flex items-center justify-center\'><i data-lucide=\'cpu\' class=\'text-slate-950 w-10 h-10\'></i></div>'; lucide.createIcons();">
+            </div>
+            <div class="flex justify-center gap-12 mb-10 text-slate-400 font-medium uppercase tracking-widest text-xs">
+                <a href="#services" class="hover:text-turquoise transition-colors">Services</a>
+                <a href="#insights" class="hover:text-turquoise transition-colors">Insights</a>
+                <a href="mailto:info@pnct.co.za" class="hover:text-turquoise transition-colors">Contact</a>
+            </div>
             <p class="text-slate-600 text-sm tracking-wide">© 2025 P&C SOLUTIONS. PREMIER DIGITAL ENGINEERING. SOUTH AFRICA.</p>
         </div>
     </footer>

@@ -19,7 +19,6 @@
         .hero-glow { background: radial-gradient(circle at center, rgba(0, 242, 254, 0.15) 0%, transparent 70%); }
         @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
         .animate-float { animation: float 6s ease-in-out infinite; }
-        .image-fallback { display: flex; align-items: center; justify-content: center; background: #0f172a; border: 1px solid #0891B2; }
     </style>
 </head>
 <body class="bg-[#020617] text-slate-200 selection:bg-cyan-500 selection:text-white">
@@ -31,11 +30,11 @@
                     <div class="w-14 h-14 rounded-full overflow-hidden border border-turquoise/20 flex items-center justify-center bg-slate-900">
                         <img src="IMG-20251222-WA0011.jpg" alt="P&C" id="nav-logo" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'brand-gradient w-full h-full flex items-center justify-center\'><i data-lucide=\'cpu\' class=\'text-slate-950 w-7 h-7\'></i></div>'; lucide.createIcons();">
                     </div>
-                    <span class="text-white font-black text-2xl tracking-tighter">P&C SOLUTIONS</span>
+                    <span class="text-white font-black text-2xl tracking-tighter uppercase">P&C SOLUTIONS</span>
                 </a>
                 <div class="hidden md:flex items-center space-x-10">
                     <a href="#services" class="text-slate-400 hover:text-turquoise transition-colors font-medium text-sm uppercase tracking-widest">Services</a>
-                    <a href="#insights" class="text-slate-400 hover:text-turquoise transition-colors font-medium text-sm uppercase tracking-widest">Insights</a>
+                    <a href="#extended-services" class="text-slate-400 hover:text-turquoise transition-colors font-medium text-sm uppercase tracking-widest">Solutions</a>
                     <a href="#contact" class="brand-gradient text-slate-950 px-8 py-3 rounded-full font-bold text-sm transition-all hover:scale-105 shadow-lg shadow-cyan-500/20">
                         GET A QUOTE
                     </a>
@@ -71,61 +70,64 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-24">
                 <h2 class="text-turquoise font-bold uppercase tracking-[0.4em] text-sm mb-4">Core Capabilities</h2>
-                <h3 class="text-5xl font-black text-white tracking-tight">Full-Spectrum Digital Engineering</h3>
+                <h3 class="text-5xl font-black text-white tracking-tight">Technical Excellence</h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div class="p-10 glass-card rounded-[3rem] group hover:border-turquoise/50 transition-all duration-500">
                     <i data-lucide="code-2" class="text-turquoise w-12 h-12 mb-8"></i>
                     <h4 class="text-2xl font-bold text-white mb-4">Software Solutions</h4>
-                    <p class="text-slate-400 font-light leading-relaxed">Enterprise-grade architecture designed for scalability and high-load performance.</p>
+                    <p class="text-slate-400 font-light leading-relaxed">Bespoke software architecture designed to integrate seamlessly into your business operations.</p>
                 </div>
                 <div class="p-10 glass-card rounded-[3rem] group hover:border-turquoise/50 transition-all duration-500">
                     <i data-lucide="shield-check" class="text-turquoise w-12 h-12 mb-8"></i>
                     <h4 class="text-2xl font-bold text-white mb-4">Business Strategy</h4>
-                    <p class="text-slate-400 font-light leading-relaxed">Tailored consulting to optimize operational efficiency and digital transformation.</p>
+                    <p class="text-slate-400 font-light leading-relaxed">Every business is unique. We provide personal, tailored advice that addresses your specific needs.</p>
                 </div>
                 <div class="p-10 glass-card rounded-[3rem] group hover:border-turquoise/50 transition-all duration-500">
                     <i data-lucide="layout" class="text-turquoise w-12 h-12 mb-8"></i>
                     <h4 class="text-2xl font-bold text-white mb-4">Website Creations</h4>
-                    <p class="text-slate-400 font-light leading-relaxed">High-conversion digital frontends with a focus on immersive user experience.</p>
+                    <p class="text-slate-400 font-light leading-relaxed">High-performance digital frontends that define your brand and drive measurable results.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="insights" class="py-32 bg-[#030a1f]">
+    <section id="extended-services" class="py-32 bg-[#030a1f]">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="flex justify-between items-end mb-16">
-                <div>
-                    <h2 class="text-turquoise font-bold uppercase tracking-widest text-sm mb-4">Latest Insights</h2>
-                    <h3 class="text-5xl font-black text-white tracking-tight">Technical Excellence</h3>
-                </div>
-                <a href="#contact" class="text-turquoise border-b border-turquoise pb-1 font-bold hover:text-white hover:border-white transition-all uppercase tracking-widest text-sm">View All</a>
+            <div class="text-center mb-24">
+                <h2 class="text-turquoise font-bold uppercase tracking-[0.4em] text-sm mb-4">Extended Solutions</h2>
+                <h3 class="text-5xl font-black text-white tracking-tight">Broad Scale Specialized Offerings</h3>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="group cursor-pointer overflow-hidden rounded-[2.5rem] glass-card">
-                    <div class="h-80 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200" alt="Cloud Security" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    </div>
-                    <div class="p-10">
-                        <p class="text-turquoise text-xs font-bold uppercase tracking-widest mb-4">Security</p>
-                        <h4 class="text-3xl font-bold text-white mb-6 group-hover:text-turquoise transition-colors">Fortifying Enterprise Cloud Infrastructure</h4>
-                        <div class="flex items-center gap-2 text-white font-semibold">
-                            Learn more <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                        </div>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-10 glass-card rounded-[3rem] border border-turquoise/10 hover:border-turquoise/40 transition-all group">
+                    <i data-lucide="workflow" class="text-turquoise w-10 h-10 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-xl font-bold text-white mb-4 uppercase tracking-wider">Automation Systems</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Intelligent workflows and scripts that eliminate repetitive tasks and human error.</p>
                 </div>
-                <div class="group cursor-pointer overflow-hidden rounded-[2.5rem] glass-card">
-                    <div class="h-80 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200" alt="Artificial Intelligence" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    </div>
-                    <div class="p-10">
-                        <p class="text-turquoise text-xs font-bold uppercase tracking-widest mb-4">Innovation</p>
-                        <h4 class="text-3xl font-bold text-white mb-6 group-hover:text-turquoise transition-colors">The New Rules of AI-Powered Ecosystems</h4>
-                        <div class="flex items-center gap-2 text-white font-semibold">
-                            Learn more <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                        </div>
-                    </div>
+                <div class="p-10 glass-card rounded-[3rem] border border-turquoise/10 hover:border-turquoise/40 transition-all group">
+                    <i data-lucide="globe" class="text-turquoise w-10 h-10 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-xl font-bold text-white mb-4 uppercase tracking-wider">Online Presence</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Strategic SEO and digital branding to dominate the local and global search landscape.</p>
+                </div>
+                <div class="p-10 glass-card rounded-[3rem] border border-turquoise/10 hover:border-turquoise/40 transition-all group">
+                    <i data-lucide="terminal" class="text-turquoise w-10 h-10 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-xl font-bold text-white mb-4 uppercase tracking-wider">Web Applications</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Scalable, secure cloud-based applications built with modern frameworks.</p>
+                </div>
+                <div class="p-10 glass-card rounded-[3rem] border border-turquoise/10 hover:border-turquoise/40 transition-all group">
+                    <i data-lucide="sparkles" class="text-turquoise w-10 h-10 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-xl font-bold text-white mb-4 uppercase tracking-wider">Modern Designs</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">We stay ahead of the curve, using latest UI/UX trends to ensure your brand looks fresh.</p>
+                </div>
+                <div class="p-10 glass-card rounded-[3rem] border border-turquoise/10 hover:border-turquoise/40 transition-all group">
+                    <i data-lucide="cpu" class="text-turquoise w-10 h-10 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-xl font-bold text-white mb-4 uppercase tracking-wider">Technical Consulting</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">Expert guidance on digital transformation and technical feasibility for startups and SMEs.</p>
+                </div>
+                <div class="p-10 glass-card rounded-[3rem] border border-turquoise/10 hover:border-turquoise/40 transition-all group">
+                    <i data-lucide="shield-check" class="text-turquoise w-10 h-10 mb-6 group-hover:scale-110 transition-transform"></i>
+                    <h4 class="text-xl font-bold text-white mb-4 uppercase tracking-wider">Maintenance & Support</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed">We are your long-term partners, ensuring your systems stay up and running 24/7.</p>
                 </div>
             </div>
         </div>
@@ -147,14 +149,14 @@
         </div>
     </section>
 
-    <footer class="py-20 border-t border-slate-900 text-center">
+    <footer class="py-20 border-t border-slate-900 text-center bg-[#020617]">
         <div class="max-w-7xl mx-auto px-4">
             <div class="w-20 h-20 mx-auto rounded-full overflow-hidden border border-turquoise/20 flex items-center justify-center bg-slate-900 mb-10">
                 <img src="IMG-20251222-WA0011.jpg" alt="Logo" class="w-full h-full object-cover opacity-60 hover:opacity-100 transition-opacity" onerror="this.parentElement.innerHTML='<div class=\'brand-gradient w-full h-full flex items-center justify-center\'><i data-lucide=\'cpu\' class=\'text-slate-950 w-10 h-10\'></i></div>'; lucide.createIcons();">
             </div>
             <div class="flex justify-center gap-12 mb-10 text-slate-400 font-medium uppercase tracking-widest text-xs">
                 <a href="#services" class="hover:text-turquoise transition-colors">Services</a>
-                <a href="#insights" class="hover:text-turquoise transition-colors">Insights</a>
+                <a href="#extended-services" class="hover:text-turquoise transition-colors">Solutions</a>
                 <a href="mailto:info@pnct.co.za" class="hover:text-turquoise transition-colors">Contact</a>
             </div>
             <p class="text-slate-600 text-sm tracking-wide">© 2025 P&C SOLUTIONS. PREMIER DIGITAL ENGINEERING. SOUTH AFRICA.</p>

@@ -14,6 +14,7 @@
         .text-turquoise { color: #00F2FE; }
         .bg-turquoise { background-color: #00F2FE; }
         .border-turquoise { border-color: #00F2FE; }
+        /* Brand Gradient using the requested Turquoise scheme */
         .brand-gradient { background: linear-gradient(135deg, #0891B2 0%, #00F2FE 100%); }
         .glass-card { background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.05); }
         .hero-glow { background: radial-gradient(circle at center, rgba(0, 242, 254, 0.15) 0%, transparent 70%); }
@@ -27,15 +28,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <a href="#home" class="flex items-center space-x-4 cursor-pointer">
-                    <div class="w-12 h-12 brand-gradient rounded-full flex items-center justify-center shadow-lg shadow-cyan-500/20">
-                        <i data-lucide="cpu" class="text-slate-950 w-7 h-7"></i>
-                    </div>
+                    <img src="IMG-20251222-WA0011.jpg" alt="P&C Solutions Logo" class="w-14 h-14 rounded-full border border-turquoise/20">
                     <span class="text-white font-black text-2xl tracking-tighter uppercase">P&C Solutions</span>
                 </a>
                 <div class="hidden md:flex items-center space-x-10">
                     <a href="#services" class="text-slate-400 hover:text-turquoise transition-colors font-medium text-sm uppercase tracking-widest">Services</a>
                     <a href="#insights" class="text-slate-400 hover:text-turquoise transition-colors font-medium text-sm uppercase tracking-widest">Insights</a>
-                    <a href="#contact" class="brand-gradient text-slate-950 px-8 py-3 rounded-full font-bold text-sm transition-all hover:scale-105">
+                    <a href="#contact" class="brand-gradient text-slate-950 px-8 py-3 rounded-full font-bold text-sm transition-all hover:scale-105 shadow-lg shadow-cyan-500/20">
                         GET A QUOTE
                     </a>
                 </div>
@@ -64,37 +63,32 @@
                 </div>
             </div>
             <div class="relative hidden lg:block animate-float">
-                <div class="w-full aspect-square glass-card rounded-[3rem] flex items-center justify-center border-turquoise/20 relative overflow-hidden">
-                    <div class="absolute inset-0 brand-gradient opacity-5"></div>
-                    <i data-lucide="layers" class="text-turquoise w-48 h-48 opacity-20"></i>
-                    <div class="absolute bottom-10 left-10 p-6 glass-card rounded-2xl border-turquoise/30">
-                        <p class="text-turquoise font-black text-3xl">100%</p>
-                        <p class="text-slate-400 text-xs uppercase tracking-widest font-bold">Reliability Focused</p>
-                    </div>
-                </div>
+                <img src="IMG-20251221-WA0013.jpg" alt="Solutions Overview" class="rounded-[3rem] shadow-2xl border border-turquoise/10 w-full">
             </div>
         </div>
     </section>
 
     <section id="services" class="py-32 relative bg-[#020617]">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-turquoise font-bold uppercase tracking-[0.4em] text-sm mb-4">Core Capabilities</h2>
-            <h3 class="text-5xl font-black text-white tracking-tight mb-24">Digital Engineering Excellence</h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-24">
+                <h2 class="text-turquoise font-bold uppercase tracking-[0.4em] text-sm mb-4">What We Offer</h2>
+                <h3 class="text-5xl font-black text-white tracking-tight">Digital Engineering Excellence</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div class="p-10 glass-card rounded-[3rem] group hover:border-turquoise/50 transition-all">
                     <i data-lucide="code-2" class="text-turquoise w-12 h-12 mb-8"></i>
                     <h4 class="text-2xl font-bold text-white mb-4">Software Solutions</h4>
-                    <p class="text-slate-400 font-light">Enterprise-grade architecture designed for scalability and high performance.</p>
+                    <p class="text-slate-400 font-light leading-relaxed">Custom architecture built to scale with your growing enterprise needs.</p>
                 </div>
                 <div class="p-10 glass-card rounded-[3rem] group hover:border-turquoise/50 transition-all">
                     <i data-lucide="briefcase" class="text-turquoise w-12 h-12 mb-8"></i>
                     <h4 class="text-2xl font-bold text-white mb-4">Business Solutions</h4>
-                    <p class="text-slate-400 font-light">Strategic consulting to streamline and optimize your business operations.</p>
+                    <p class="text-slate-400 font-light leading-relaxed">Strategic consulting to streamline and optimize your business operations.</p>
                 </div>
                 <div class="p-10 glass-card rounded-[3rem] group hover:border-turquoise/50 transition-all">
                     <i data-lucide="monitor" class="text-turquoise w-12 h-12 mb-8"></i>
                     <h4 class="text-2xl font-bold text-white mb-4">Website Creations</h4>
-                    <p class="text-slate-400 font-light">High-performance digital frontends designed to drive measurable results.</p>
+                    <p class="text-slate-400 font-light leading-relaxed">High-performance digital frontends designed to drive measurable results.</p>
                 </div>
             </div>
         </div>
@@ -105,28 +99,34 @@
             <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
                 <div>
                     <h2 class="text-turquoise font-bold uppercase tracking-widest text-sm mb-4">Latest Insights</h2>
-                    <h3 class="text-5xl font-black text-white tracking-tight">Technical Excellence</h3>
+                    <h3 class="text-5xl font-black text-white tracking-tight">Our Technical Perspectives</h3>
                 </div>
+                <a href="#contact" class="text-turquoise border-b border-turquoise pb-1 font-bold hover:text-white transition-all tracking-widest text-sm uppercase">Get In Touch</a>
             </div>
+            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div class="group cursor-pointer overflow-hidden rounded-[2.5rem] glass-card">
-                    <div class="h-72 bg-slate-900 flex items-center justify-center">
-                        <i data-lucide="brain-circuit" class="w-24 h-24 text-turquoise opacity-20 group-hover:scale-110 transition-transform"></i>
+                    <div class="h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200" alt="AI Development" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
                     <div class="p-10">
                         <p class="text-turquoise text-xs font-bold uppercase tracking-widest mb-4">Innovation</p>
-                        <h4 class="text-3xl font-bold text-white mb-6 group-hover:text-turquoise transition-colors">Cutting Dev Time with Enterprise AI</h4>
-                        <div class="flex items-center gap-2 text-white font-semibold">Read Insight <i data-lucide="arrow-right" class="w-5 h-5"></i></div>
+                        <h4 class="text-3xl font-bold text-white mb-6 group-hover:text-turquoise transition-colors">Cutting Dev Time with Enterprise AI Platforms</h4>
+                        <div class="flex items-center gap-2 text-white font-semibold">
+                            Read Insight <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="group cursor-pointer overflow-hidden rounded-[2.5rem] glass-card">
-                    <div class="h-72 bg-slate-900 flex items-center justify-center">
-                        <i data-lucide="shield-check" class="w-24 h-24 text-turquoise opacity-20 group-hover:scale-110 transition-transform"></i>
+                    <div class="h-72 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200" alt="Cloud Security" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
                     <div class="p-10">
                         <p class="text-turquoise text-xs font-bold uppercase tracking-widest mb-4">Security</p>
-                        <h4 class="text-3xl font-bold text-white mb-6 group-hover:text-turquoise transition-colors">Fortifying Your Cloud Architecture</h4>
-                        <div class="flex items-center gap-2 text-white font-semibold">Read Insight <i data-lucide="arrow-right" class="w-5 h-5"></i></div>
+                        <h4 class="text-3xl font-bold text-white mb-6 group-hover:text-turquoise transition-colors">How to Fortify Your Cloud Security Architecture</h4>
+                        <div class="flex items-center gap-2 text-white font-semibold">
+                            Read Insight <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -134,16 +134,18 @@
     </section>
 
     <section id="contact" class="py-32">
-        <div class="max-w-5xl mx-auto px-4 text-center">
-            <h2 class="text-5xl md:text-7xl font-black text-white tracking-tighter mb-12">Ready to take the <br><span class="text-transparent bg-clip-text brand-gradient">next step?</span></h2>
+        <div class="max-w-5xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-7xl font-black text-white tracking-tighter mb-6">Ready to take the <br><span class="text-transparent bg-clip-text brand-gradient">next step?</span></h2>
+            </div>
             <div class="glass-card rounded-[3.5rem] p-10 md:p-16">
                 <form action="https://formspree.io/f/info@pnct.co.za" method="POST" class="space-y-8">
                     <div class="grid md:grid-cols-2 gap-8">
                         <input type="text" name="name" placeholder="Full Name" required class="w-full bg-slate-900/50 border border-slate-800 rounded-full px-8 py-5 text-white focus:border-turquoise outline-none transition-all">
                         <input type="email" name="email" placeholder="Email Address" required class="w-full bg-slate-900/50 border border-slate-800 rounded-full px-8 py-5 text-white focus:border-turquoise outline-none transition-all">
                     </div>
-                    <textarea name="message" rows="5" placeholder="How can we help your business?" required class="w-full bg-slate-900/50 border border-slate-800 rounded-[2.5rem] px-8 py-6 text-white focus:border-turquoise outline-none transition-all"></textarea>
-                    <button type="submit" class="w-full py-6 brand-gradient text-slate-950 font-black rounded-full text-xl uppercase tracking-widest">Connect with our experts</button>
+                    <textarea name="message" rows="5" placeholder="How can we help you?" required class="w-full bg-slate-900/50 border border-slate-800 rounded-[2.5rem] px-8 py-6 text-white focus:border-turquoise outline-none transition-all"></textarea>
+                    <button type="submit" class="w-full py-6 brand-gradient text-slate-950 font-black rounded-full text-xl shadow-2xl hover:scale-[1.02] transition-all uppercase tracking-widest">Connect with our experts</button>
                 </form>
             </div>
         </div>
@@ -151,10 +153,8 @@
 
     <footer class="py-20 border-t border-slate-900 text-center bg-[#020617]">
         <div class="max-w-7xl mx-auto px-4">
-            <div class="w-16 h-16 brand-gradient rounded-full flex items-center justify-center mx-auto mb-10 opacity-60">
-                <i data-lucide="cpu" class="text-slate-950 w-8 h-8"></i>
-            </div>
-            <p class="text-slate-600 text-xs tracking-wide uppercase">© 2025 P&C SOLUTIONS. PREMIER DIGITAL ENGINEERING. SOUTH AFRICA.</p>
+            <img src="IMG-20251222-WA0011.jpg" alt="Logo" class="w-20 h-20 mx-auto rounded-full mb-10 opacity-60">
+            <p class="text-slate-600 text-sm tracking-wide">© 2025 P&C SOLUTIONS. PREMIER DIGITAL ENGINEERING. SOUTH AFRICA.</p>
         </div>
     </footer>
 
